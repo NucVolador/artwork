@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>个人中心</title>
+	<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/car.css">
+	<style>
+		.content{
+			display:none;
+		}
+		.content_active{
+			display:block;
+		}
+
+	</style>
+</head>
+<body>	
+	<div id="wrapper" style="margin-bottom: 20px;">
+       	<div class="overlay"></div>
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav aa text-center" data="">
+                <li class="sidebar-brand">
+                    <a href="index.html">返回商城</a>
+                </li>
+                <li>
+                    <a href="#home">个人信息</a>
+                </li>
+                 <li>
+                    <a href="#password">修改密码</a>
+                </li>
+                <li>
+                    <a href="#voucher">充值</a>
+                </li>
+                <li>
+                    <a href="#deposit">提现</a>
+                </li>
+                <li>
+                    <a href="#myOrder">我的订单</a>
+                </li>
+                <li>
+                    <a href="#myMess" class="btn"> 我的消息 <span class="badge">4</span> </a>
+                </li>
+
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+            <div class="container">
+                <div class="row">
+<!--个人信息-->
+                    <div class="col-lg-8 col-lg-offset-2 content content_active" id="home">
+                        <div class="m-t-b clearfix">           
+				            <section class="col-xs-12 col-sm-12 col-md-12">
+				            <div class="panel-group checkout" id="checkout-collapse">
+				                <div class="panel panel-default">
+				                  <div class="panel-heading">
+				                    <h4 class="panel-title">
+				                        <span class="step">01</span>
+				                        我的个人信息
+				                    </h4>
+				                  </div>
+				                  <div id="checkout-collapse3" class="panel-collapse">
+				                    <div class="panel-body">
+				                      <form class="form-horizontal" role="form">
+				                        <div class="row">
+				                          <div class="col-xs-12 col-sm-12 col-md-6">
+				                            <div class="form-group stylish-input">
+				                              <label for="inputFirstname" class="col-sm-4 col-lg-4 control-label required">姓名</label>
+				                              <div class="col-sm-8 col-lg-8">
+				                                <input type="text" class="form-control" id="inputFirstname" />
+				                              </div>
+				                            </div>
+				                            <div class="form-group stylish-input">
+				                              <label for="inputEmail2" class="col-sm-4 col-lg-4 control-label required">邮箱</label>
+				                              <div class="col-sm-8 col-lg-8">
+				                                <input type="email" class="form-control" id="inputEmail2" />
+				                              </div>
+				                            </div>
+				                            <div class="form-group stylish-input">
+				                              <label for="inputPhone" class="col-sm-4 col-lg-4 control-label required">电话</label>
+				                              <div class="col-sm-8 col-lg-8">
+				                                <input type="text" class="form-control" id="inputPhone" />
+				                              </div>
+				                            </div>
+				                          </div>
+				   
+
+				                        <div class="space20 clearfix"></div>
+				                        <button class="btn btn-primary">确认信息</button>
+				                      </form>
+				                    </div>
+				                  </div>
+				                </div>
+				          	</div>
+				            </section>
+          				</div>
+					</div>
+
+<!--修改密码-->
+					<div class="space20 clearfix"></div>
+					<div class="col-lg-8 col-lg-offset-2 content " id="password">
+                        <div class="m-t-b clearfix">           
+				            <section class="col-xs-12 col-sm-12 col-md-12">
+				            <div class="panel-group checkout" id="checkout-collapse">
+				                <div class="panel panel-default">
+				                  <div class="panel-heading">
+				                    <h4 class="panel-title">
+				                        <span class="step">01</span>
+				                        修改密码
+				                    </h4>
+				                  </div>
+				                  <div id="checkout-collapse3" class="panel-collapse">
+				                    <div class="panel-body">
+				                      <form class="form-horizontal" role="form">
+				                        <div class="row">
+				                          <div class="col-xs-12 col-sm-12 col-md-6">
+				                            <div class="form-group stylish-input">
+				                              <label for="inputFirstname" class="col-sm-4 col-lg-4 control-label required">原始密码</label>
+				                              <div class="col-sm-8 col-lg-8">
+				                                <input type="text" class="form-control" id="inputFirstname" />
+				                              </div>
+				                            </div>
+				                            <div class="form-group stylish-input">
+				                              <label for="inputEmail2" class="col-sm-4 col-lg-4 control-label required">新密码</label>
+				                              <div class="col-sm-8 col-lg-8">
+				                                <input type="password" class="form-control" id="inputEmail2" />
+				                              </div>
+				                            </div>
+				                            <div class="form-group stylish-input">
+				                              <label for="inputPhone" class="col-sm-4 col-lg-4 control-label required">再次输入</label>
+				                              <div class="col-sm-8 col-lg-8">
+				                                <input type="password" class="form-control" id="inputPhone" />
+				                              </div>
+				                            </div>
+				                          </div>
+				   
+										</div>
+				                        <div class="space20 clearfix"></div>
+				                        <button class="btn btn-primary">确认修改</button>
+				                      </form>
+				                    </div>
+				                  </div>
+				                </div>
+				          	</div>
+				            </section>
+          				</div>
+          			</div>
+					
+
+
+<!--充值-->
+ 					<div class="space20 clearfix"></div>
+                    <div class="col-lg-8 col-lg-offset-2 content" id="voucher">
+                       <div class="m-t-b clearfix">           
+				            <section class="col-xs-12 col-sm-12 col-md-12">
+				            <div class="panel-group checkout" id="checkout-collapse">
+
+				                 		<div class="panel panel-default">
+						                  	<div class="panel-heading">
+							                    <h4 class="panel-title">
+							                        <span class="step">01</span>
+							                        在线充值
+							                    </h4>
+						                 	 </div>
+						                  	<div id="checkout-collapse3" class="panel-collapse">
+						                    <div class="panel-body">
+						                      <form class="form-horizontal" role="form">
+						                        <div class="row">
+						                          	<div class="col-xs-12 col-sm-12 col-md-12">
+							                            <div class="form-group stylish-input">
+						                              <label for="inputFirstname" class="col-sm-4 col-lg-4 control-label required">充值金额</label>
+						                              <div class="col-sm-8 col-lg-8">
+						                                <input type="text" class="form-control" id="inputFirstname" />
+						                              </div>
+						                            </div>
+						                        	</div>
+
+						                        	<div class="col-xs-12 col-sm-12 col-md-12">
+							                            <div class="form-group stylish-input">
+							                              <label for="inputFirstname" class="col-sm-4 col-lg-4 control-label required">充值方式</label>
+							                              <div class="col-sm-8 col-lg-8">
+															<div class ="form-group fashion-input">
+																<ul>
+																	<input type ="radio" name ="radio"/><img src="../img/zfb.jpg">
+																</ul>
+																
+																<ul>
+																	<input type ="radio" name ="radio"/><img src="../img/wei_pay.png">
+																</ul>
+															</div>
+								                              </div>
+							                            </div>
+						                        	</div>
+						                        	<div class="space20 clearfix"></div>
+						                        	<button class="btn btn-primary">确认充值</button>
+						                      </form>
+						                </div>
+						                </div>         
+				          			</div>
+				           	 </section>
+          				</div>
+                    </div>
+
+<!--提现-->
+                    <div class="col-lg-8 col-lg-offset-2 content" id="deposit">
+                       <div class="m-t-b clearfix">           
+				            <section class="col-xs-12 col-sm-12 col-md-12">
+				            <div class="panel-group checkout" id="checkout-collapse">
+						                <div class="panel panel-default">
+						                  <div class="panel-heading">
+						                    <h4 class="panel-title">
+						                        <span class="step">01</span>
+						                        我要提现
+						                    </h4>
+						                  </div>
+						                  <div id="checkout-collapse3" class="panel-collapse">
+						                    <div class="panel-body">
+						                      <form class="form-horizontal" role="form">
+						                        <div class="row">
+						                          <div class="col-xs-12 col-sm-12 col-md-6">
+						                            <div class="form-group stylish-input">
+						                              <label for="inputFirstname" class="col-sm-4 col-lg-4 control-label required">可用余额</label>
+						                              <div class="col-sm-8 col-lg-8">
+						                                <input type="text" class="form-control" id="inputFirstname" readonly/>
+						                              </div>
+						                            </div>
+						                            <div class="form-group stylish-input">
+						                              <label for="inputEmail2" class="col-sm-4 col-lg-4 control-label required">支付宝帐号</label>
+						                              <div class="col-sm-8 col-lg-8">
+						                                <input type="text" class="form-control" id="inputEmail2" />
+						                              </div>
+						                            </div>
+						                            <div class="form-group stylish-input">
+						                              <label for="inputPhone" class="col-sm-4 col-lg-4 control-label required">支付宝用户名</label>
+						                              <div class="col-sm-8 col-lg-8">
+						                                <input type="text" class="form-control" id="inputPhone" />
+						                              </div>
+						                            </div>
+
+						                            <div class="form-group stylish-input">
+						                              <label for="inputPhone" class="col-sm-4 col-lg-4 control-label required">提取金额</label>
+						                              <div class="col-sm-8 col-lg-8">
+						                                <input type="text" class="form-control" id="inputPhone" />
+						                              </div>
+						                            </div>
+						                          </div>
+						                        <div class="space20 clearfix"></div>
+						                        <button class="btn btn-primary">确认提取</button>
+						                      </form>
+						                    </div>
+						                  </div>
+						                </div>
+				          	</div>
+				            </section>
+          				</div>
+                    </div>
+
+
+
+<!--我的订单-->
+                    <div class="col-lg-8 col-lg-offset-2 content" id="myOrder">
+                        <div class="container-fluid">
+							<div class="row" style="padding:10px;border: 1px solid #f4f4f4">
+								<div class="col-md-12 col-sm-12 col-xs-12" style="; margin-top: 20px;height: 38px;line-height: 35px;border-bottom: 1px solid #e7e7e7;margin-bottom: 20px">
+									<span style="font-size: 16px;color: #f40;font-family:Microsoft yahei">订单管理</span>
+								</div>
+								<div class="row hidden-xs" >
+										<div class="col-md-2 col-sm-2">
+											
+										</div>
+										<div class="col-md-4 col-sm-4">
+											商品信息
+										</div>
+										<div class="col-md-2 col-sm-2">
+											单价
+										</div>
+										<div class="col-md-2 col-sm-2">
+											交易状态
+										</div>
+										<div class="col-md-2 col-sm-2">
+											交易操作
+										</div>
+								</div>
+								<div style="padding: 10px">
+									<div class="row myOrders" >
+										<div class="col-md-2 col-sm-3">2017-10-26</div>
+										<div class="col-md-4 col-sm-4"> 订单号：229348372086</div>
+									</div>
+									<div class="row">
+										<div class="col-md-2 col-sm-2 col-xs-3 text-center">
+											<a href="">
+												<img src="../img/car.jpg">
+											</a>
+										</div>
+										<div class="col-md-4 col-sm-4 col-xs-4" >
+											<span>嘻哈潮牌国潮 无运动 拉链立领宽松套头夹克男</span>
+										</div>
+										<div class="col-md-2 col-sm-2 col-xs-3 money" style="color: #f40;font-weight: 700;">
+											&yen379.00
+										</div>
+										<div class="col-md-2 col-sm-2   hidden-xs" >
+											待付款
+										</div>
+										<div class="col-md-2 col-sm-2 col-xs-2">
+											<button class="btn-danger">付款</button>
+										</div>
+									</div>
+								</div>
+
+								<div style="padding: 10px">
+									<div class="row myOrders" >
+										<div class="col-md-2 col-sm-3">2017-10-26</div>
+										<div class="col-md-4 col-sm-4"> 订单号：229348372086</div>
+									</div>
+									<div class="row">
+										<div class="col-md-2 col-sm-2 col-xs-3 text-center">
+											<a href="">
+												<img src="../img/car.jpg">
+											</a>
+										</div>
+										<div class="col-md-4 col-sm-4 col-xs-4" >
+											<span>嘻哈潮牌国潮 无运动 拉链立领宽松套头夹克男</span>
+										</div>
+										<div class="col-md-2 col-sm-2 col-xs-3 money" style="color: #f40;font-weight: 700;">
+											&yen379.00
+										</div>
+										<div class="col-md-2 col-sm-2   hidden-xs" >
+											待付款
+										</div>
+										<div class="col-md-2 col-sm-2 col-xs-2">
+											<button class="btn-danger">付款</button>
+										</div>
+									</div>
+								</div>
+							</div>
+          				</div>                     
+                    </div>
+
+<!--我的消息-->
+                     <div class="col-lg-8 col-lg-offset-2 content" id="myMess">
+                        <div class="container">
+							  <!-- Nav tabs -->
+							  	<ul class="nav nav-tabs" role="tablist">
+							    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">全部消息</a></li>
+							  	</ul>
+
+							  <!-- Tab panes -->
+								<div class="tab-content">
+								    <div role="tabpanel" class="tab-pane active" id="home">
+								    	<table class="table table-striped">
+											<tr class="">
+												<td class="col-md-6">消息</td>
+												<td class="col-md-3">时间</td>
+												<td class="col-md-3">操作</td>
+											</tr>
+											<tr>
+												<td class="col-md-6 col-sm-6 col-xs-12">张三想用价值￥1200的<a href="info.html" style="color: #ee394b">花瓶</a>交换你￥1100的瓷器
+												</td>
+												<td class="col-md-3 col-sm-3 col-xs-6">2017.10.21</td>
+												<td class="col-md-3 col-sm-3 col-xs-6">
+													<button class="btn btn-success">同意</button>
+													<button class="btn btn-danger">拒绝</button>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="col-md-6 col-sm-6 col-xs-12">张三想用价值￥1200的<a href="info.html" style="color: #ee394b">花瓶</a>交换你￥1100的瓷器
+												</td>
+												<td class="col-md-3 col-sm-3 col-xs-6">2017.10.21</td>
+												<td class="col-md-3 col-sm-3 col-xs-6">
+													<button class="btn btn-success">同意</button>
+													<button class="btn btn-danger">拒绝</button>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="col-md-6 col-sm-6 col-xs-12">张三想用价值￥1200的<a href="info.html" style="color: #ee394b">花瓶</a>交换你￥1100的瓷器
+												</td>
+												<td class="col-md-3 col-sm-3 col-xs-6">2017.10.21</td>
+												<td class="col-md-3 col-sm-3 col-xs-6">
+													<button class="btn btn-success">同意</button>
+													<button class="btn btn-danger">拒绝</button>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="col-md-6 col-sm-6 col-xs-12">张三想用价值￥1200的花瓶交换你￥1100的瓷器
+												</td>
+												<td class="col-md-3 col-sm-3 col-xs-6">2017.10.21</td>
+												<td class="col-md-3 col-sm-3 col-xs-6">
+													<button class="btn btn-success">同意</button>
+													<button class="btn btn-danger">拒绝</button>
+												</td>
+											</tr>
+										</table>
+								    </div>	
+	                        	</div>
+                    	</div>
+                	</div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+<section id="move" class="visible-xs-block">
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <ul class="nav nav-pills">
+        <li role="presentation" ><a href="index.html">首页</a></li>
+        <li role="presentation" ><a href="car.html">购物车</a></li>
+        <li role="presentation" ><a href="persion.html">个人中心</a></li>
+        </ul>
+      </div>
+    </nav>
+</section>
+
+	<script src="../lib/jquery/jquery.min.js"></script>
+	<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+		  var trigger = $('.hamburger'),
+		      overlay = $('.overlay'),
+		     isClosed = false;
+
+		    trigger.click(function () {
+		      hamburger_cross();      
+		    });
+
+		    function hamburger_cross() {
+
+		      if (isClosed == true) {          
+		        overlay.hide();
+		        trigger.removeClass('is-open');
+		        trigger.addClass('is-closed');
+		        isClosed = false;
+		      } else {   
+		        overlay.show();
+		        trigger.removeClass('is-closed');
+		        trigger.addClass('is-open');
+		        isClosed = true;
+		      }
+		  }
+		  
+		  $('[data-toggle="offcanvas"]').click(function () {
+		        $('#wrapper').toggleClass('toggled');
+		  });  
+		  $('.aa > li > a').on('click',function(){
+					$('.content').attr('class','content');
+					var $sHref = $(this).attr('href');
+					
+					$($sHref).attr('class','content content_active');
+				});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+.titles{
+	width:100%;height:60px;
+}
+.titles >h2{
+	font-size: 32px;
+}
+.titles >h2>span{
+	font-weight:bold;text-align: 60px
+}
+
+
+.contents{
+	width: 100%;
+	padding: 25px 36px;border: 1px solid #ccc;margin-bottom: 15px;margin-top: 20px;margin-bottom: 30px;
+}
+.contents>p{
+	color: #666;line-height: 1.7;margin-bottom: 20px;width: 100%;
+}

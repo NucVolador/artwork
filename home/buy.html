@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>艺术品交易平台</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <!--[if lt IE 9]>
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <script src="lib/respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<!--头部-->
+<header id="header">
+<nav class="navbar navbar-custom navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">艺术品交易中心</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">首页</a></li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">搜一搜</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">登录</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人中心 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">我的账户</a></li>
+            <li><a href="#">消息</a></li>
+            <li><a href="#">充值</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">退出</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</header>
+<!--#头部结束-->
+
+
+
+<!--轮播图-->
+<section id="main_ad" class="carousel slide" data-ride="carousel">
+    <!-- 下面的小点点，活动指示器 -->
+    <ol class="carousel-indicators">
+      <li data-target="#main_ad" data-slide-to="0" class="active"></li>
+      <li data-target="#main_ad" data-slide-to="1"></li>
+      <li data-target="#main_ad" data-slide-to="2"></li>
+      <li data-target="#main_ad" data-slide-to="3"></li>
+
+    </ol>
+    <!-- 轮播项 -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active" data-image-lg="../img/slide_01_2000x410.jpg" data-image-xs="../img/slide_01_640x340.jpg"></div>
+      <div class="item" data-image-lg="../img/slide_02_2000x410.jpg" data-image-xs="../img/slide_02_640x340.jpg"></div>
+      <div class="item" data-image-lg="../img/slide_03_2000x410.jpg" data-image-xs="../img/slide_03_640x340.jpg"></div>
+      <div class="item" data-image-lg="../img/slide_04_2000x410.jpg" data-image-xs="../img/slide_04_640x340.jpg"></div>
+    </div>
+    <!-- 控制按钮 -->
+    <a class="left carousel-control" href="#main_ad" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">上一页</span>
+    </a>
+    <a class="right carousel-control" href="#main_ad" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">下一页</span>
+    </a>
+  </section>
+<!--/轮播图结束-->
+
+<!--详情页-->
+<section id="buy">
+  <div class="container-fluid">
+  <!-- Nav tabs -->
+  <div class="ul-wapper">
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">最新上架</a>
+      </li>
+
+      <li role="presentation">
+        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">书画</a>
+      </li>
+
+      <li role="presentation">
+        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">古玩</a>
+      </li>
+
+      <li role="presentation">
+        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">稀奇古怪</a>
+      </li>
+
+      <li role="presentation">
+        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">其他</a>
+      </li>
+
+    </ul> 
+  </div>
+  <!-- Tab panes -->
+  <div class="tab-content container">
+    <div role="tabpanel" class="tab-pane fade in active" id="home">
+        <div class="row" id="row-hot">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="panel panel-hot">
+                    <div class="panel-heading text-center" >
+                            <img src="../img/hot.png" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="panel-body">
+                            <h2>墙上艺术挂件</h2>
+                            <a href="info.html">查看详情</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="panel panel-hot">
+                    <div class="panel-heading text-center" >
+                            <img src="../img/hot.png" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="panel-body">
+                            <h2>墙上艺术挂件</h2>
+                            <a href="">查看详情</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="panel panel-hot">
+                    <div class="panel-heading text-center" >
+                            <img src="../img/hot.png" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="panel-body">
+                            <h2>墙上艺术挂件</h2>
+                            <a href="">查看详情</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="panel panel-hot">
+                    <div class="panel-heading text-center" >
+                            <img src="../img/hot.png" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="panel-body">
+                            <h2>墙上艺术挂件</h2>
+                            <a href="">查看详情</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="panel panel-hot">
+                    <div class="panel-heading text-center" >
+                            <img src="../img/hot.png" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="panel-body">
+                            <h2>墙上艺术挂件</h2>
+                            <a href="">查看详情</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="panel panel-hot">
+                    <div class="panel-heading text-center" >
+                            <img src="../img/hot.png" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="panel-body">
+                            <h2>墙上艺术挂件</h2>
+                            <a href="">查看详情</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="panel panel-hot">
+                    <div class="panel-heading text-center" >
+                            <img src="../img/hot.png" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="panel-body">
+                            <h2>墙上艺术挂件</h2>
+                            <a href="">查看详情</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="panel panel-hot">
+                    <div class="panel-heading text-center" >
+                            <img src="../img/hot.png" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="panel-body">
+                            <h2>墙上艺术挂件</h2>
+                            <a href="">查看详情</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="panel panel-hot">
+                    <div class="panel-heading text-center" >
+                            <img src="../img/hot.png" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="panel-body">
+                            <h2>墙上艺术挂件</h2>
+                            <a href="">查看详情</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="panel panel-hot">
+                    <div class="panel-heading text-center" >
+                            <img src="../img/hot.png" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="panel-body">
+                            <h2>墙上艺术挂件</h2>
+                            <a href="">查看详情</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="panel panel-hot">
+                    <div class="panel-heading text-center" >
+                            <img src="../img/hot.png" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="panel-body">
+                            <h2>墙上艺术挂件</h2>
+                            <a href="">查看详情</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="panel panel-hot">
+                    <div class="panel-heading text-center" >
+                            <img src="../img/hot.png" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="panel-body">
+                            <h2>墙上艺术挂件</h2>
+                            <a href="">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="text-center">
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+      <li>
+        <a href="#" aria-label="Previous">
+          <span aria-hidden="true">上一页</span>
+        </a>
+      </li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+     
+
+      <li><a href="#">......</a></li>
+     
+      <li><a href="#">19</a></li>
+      <li><a href="#">20</a></li>
+      <li>
+        <a href="#" aria-label="Next">
+          <span aria-hidden="true">下一页</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+</section>
+<!--热门结束-->
+</section>
+<!--移动端底部-->
+<section id="move" class="visible-xs-block">
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <ul class="nav nav-pills">
+        <li role="presentation" ><a href="#">首页</a></li>
+        <li role="presentation" ><a href="#">购物车</a></li>
+        <li role="presentation" ><a href="#">消息</a></li>
+        <li role="presentation" ><a href="#">个人中心</a></li>
+        </ul>
+      </div>
+    </nav>
+</section>
+<!--底部-->
+<footer id="footer hidden-xs">
+   <div class="footer">
+    <p><a href="#">商城简介</a><i>|</i><a href="#">商城公告</a><i>|</i> <a href="#">招纳贤士</a><i>|</i><a href="#">联系我们</a><i>|</i>客服热线：2131-1231-3123</p>
+    <p>Copyright &copy;XXXXXXXX版权所有&nbsp;&nbsp;&nbsp;京ICP备号&nbsp;&nbsp;&nbsp;京ICP证号&nbsp;&nbsp;&nbsp;某市公安局XX分局备案编号：123456789123</p>
+  
+  </div>
+</footer>
+<!--/底部结束-->
+
+<!-- /脚注区域 -->
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
