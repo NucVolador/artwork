@@ -1,25 +1,382 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en" class="">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>微信开发培训 | 慕课吧 - 为原创而生！ - Powered By EduSoho</title>
+        <meta name="keywords" content="微信,有料青年成长营,微信下载,weixin,微信公众号,微信公众号开发,微信开发者平台,微信开发者社区,微信开发,微信应用,应用号,应用号开发,订阅号开发,服务号开发,申请公众号,微信公众号制作">
+        <meta name="description" content="打造中国高校有料青年成长营">
+        <meta content="ST1Zl-XkQpbl6uG0LQUxvO-g36lL0PI5Ppk1KFWQcZo" name="csrf-token">
+        <meta content="0" name="is-login">
+        <meta content="0" name="is-open">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title>艺术品交易平台</title>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="../css/main.css">
-  <!--[if lt IE 9]>
-    <script src="lib/html5shiv/html5shiv.min.js"></script>
-    <script src="lib/respond/respond.min.js"></script>
-  <![endif]-->
-</head>
-<body>
-<a href="../home">首页</a>
+        <link rel="icon" href="./images/144009972bc0285567.ico?7.4.0" type="image/x-icon">
+        <link rel="shortcut icon" href="./images/144009972bc0285567.ico?7.4.0" type="image/x-icon" media="screen">
 
-<!-- /脚注区域 -->
-<script src="../lib/jquery/jquery.js"></script>
-<script src="../lib/bootstrap/js/bootstrap.js"></script>
-<script src="../js/main.js"></script>
-</body>
+
+        <link href="./css/bootstrap.css?7.4.0" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+        <link rel="stylesheet" media="screen" href="./css/common.css?7.4.0">
+        <link rel="stylesheet" media="screen" href="./css/font-awesome.min.css?7.4.0">
+        <link rel="stylesheet" media="screen" href="./css/es-icon.css">
+        <link href="./css/main.css?7.4.0" rel="stylesheet">
+
+
+        <link href="./css/header-white.css?7.4.0" rel="stylesheet">
+        <link rel="stylesheet" href="./css/new.css">
+        <style>
+            .title h2{
+                letter-spacing: 3px;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+                font-size: 26px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                color: #24292E;
+                margin-right: 40px;
+            }
+            .course-info{
+                text-align:center;color:red;font-weight:700
+            }
+        </style>
+    </head>
+    <body class="homepage">
+
+        <div class="es-wrap">
+            <header class="es-header navbar">
+                <div class="navbar-header">
+                    <div class="visible-xs  navbar-mobile">
+                        <a href="javascript:;" class="navbar-more js-navbar-more">
+                            <i class="es-icon es-icon-menu"></i>
+                        </a>
+                        <div class="html-mask"></div>
+                        <div class="nav-mobile">
+                            <form class="navbar-form" action="/search" method="get">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="搜索" name="q">
+                                    <button class="button es-icon es-icon-search"></button>
+                                </div>
+                            </form>
+
+                            <ul class="nav navbar-nav">
+                                <li class="">
+                                    <a href="javascript:;" target="_blank">首页</a>
+                                </li>
+                                <li class="nav-hover">
+                                    <a href="javascript:;">艺术收藏<b class="caret"></b></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="javascript:;">藏品一</a></li>
+                                        <li><a href="javascript:;">藏品二</a></li>
+                                        <li><a href="javascript:;">藏品三</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="javascript:;" target="_blank">藏艺术 </a>
+                                </li>
+                                <li class="">
+                                    <a href="javascript:;" target="_blank">原创艺术 </a>
+                                </li>          </ul>
+                        </div>
+                    </div>
+                    <a href="/" class="navbar-brand">
+                        <img src="./images/1528082037312.png">
+                    </a>
+                </div>
+                <nav class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav clearfix hidden-xs " id="nav">
+                        <li class="">
+                            <a href="/studyway" target="_blank">首页 </a>
+                        </li>
+                        <li class="nav-hover">
+                            <a href="/course/explore">艺术收藏<b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/course/explore/base">藏品1</a></li>
+                                <li><a href="/course/explore/account">藏品2</a></li>
+                                <li><a href="/course/explore/small">藏品3</a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="http://youth.moocba.com/index.html" target="_blank">藏艺术</a>
+                        </li>
+                        <li class="">
+                            <a href="/download" target="_blank">原创艺术 </a>
+                        </li>
+                    </ul>
+                    <div class="navbar-user  left ">
+                        <ul class="nav user-nav">
+                            <li class="user-avatar-li nav-hover visible-xs">
+                                <a href="javascript:;" class="dropdown-toggle">
+                                    <img class="avatar-xs" src="./images/avatar.png?7.4.0">
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="/login?goto=/">登录</a></li>
+                                    <li><a href="/register?goto=/">注册</a></li>
+                                </ul>
+                            </li>
+                            <li class="hidden-xs"><a href="/login?goto=/">登录</a></li>
+                            <li class="hidden-xs"><a href="/register?goto=/">注册</a></li>
+                        </ul>
+                        <form class="navbar-form navbar-right hidden-xs hidden-sm" action="/search" method="get">
+                            <div class="form-group">
+                                <input class="form-control js-search" name="q" placeholder="搜索">
+                                <button class="button es-icon es-icon-search"></button>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+            </header>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url('./images/1515034069204.jpg');">
+                        <img class="visible-xs-block" src="./images/1515034069204.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide" style="background-image:url('./images/1515034069204.jpg');">
+                        <img class="visible-xs-block" src="./images/1515034069204.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide" style="background-image:url('./images/1515034069204.jpg');">
+                        <img class="visible-xs-block" src="./images/1515034069204.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
+            </div>
+            <div class="container" id="icon">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="javascript:;">
+                            <div class="thumbnail icon-default">
+                                <img src="./images/buy.png" alt="...">
+                                <div class="caption content-center">
+                                    <h2>我要买</h2>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="javascript:;">
+                            <div class="thumbnail icon-default">
+                                <img src="./images/huan.png" alt="...">
+                                <div class="caption content-center">
+                                    <h2>我要换</h2>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="javascript:;">
+                            <div class="thumbnail icon-default">
+                                <img src="./images/sale.png" alt="...">
+                                <div class="caption content-center">
+                                    <h2>我要卖</h2>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <section class="course-list-section section-gray" id="course-list-section">
+                <div class="container">
+                    <div class="title" style="text-align: left;margin-bottom: 40px;">
+                        <h2 style="">最新上架 / NEW</h2>
+                        <hr style="border:1px solid #24292E"/>
+                    </div>
+                    <div class="course-list">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <div class="course-item">
+                                    <div class="course-img">
+                                        <a href="/course/67" target="_blank">
+                                            <img src="./images/lazyload_course.png?7.4.0" alt="电商（酒仙网）网站开发实战教程" class="img-responsive" data-echo="./images/1515036260671.png"></a>
+                                    </div>
+                                    <div class="course-info" style="text-align:center">
+                                        <h4>印度母佛像</h4>
+                                        <span>成交价<br/>￥4900.0000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <div class="course-item">
+                                    <div class="course-img">
+                                        <a href="/course/67" target="_blank">
+                                            <img src="./images/lazyload_course.png?7.4.0" alt="电商（酒仙网）网站开发实战教程" class="img-responsive" data-echo="./images/1515036260671.png"></a>
+                                    </div>
+                                    <div class="course-info" style="">
+                                        <h4>印度母佛像</h4>
+                                        <span>成交价<br/>￥4900.0000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <div class="course-item">
+                                    <div class="course-img">
+                                        <a href="/course/67" target="_blank">
+                                            <img src="./images/lazyload_course.png?7.4.0" alt="电商（酒仙网）网站开发实战教程" class="img-responsive" data-echo="./images/1515036260671.png"></a>
+                                    </div>
+                                    <div class="course-info" style="text-align:center">
+                                        <h4>印度母佛像</h4>
+                                        <span>成交价<br/>￥4900.0000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <div class="course-item">
+                                    <div class="course-img">
+                                        <a href="/course/67" target="_blank">
+                                            <img src="./images/lazyload_course.png?7.4.0" alt="电商（酒仙网）网站开发实战教程" class="img-responsive" data-echo="./images/1515036260671.png"></a>
+                                    </div>
+                                    <div class="course-info" style="text-align:center">
+                                        <h4>印度母佛像</h4>
+                                        <span>成交价<br/>￥4900.0000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <div class="course-item">
+                                    <div class="course-img">
+                                        <a href="/course/67" target="_blank">
+                                            <img src="./images/lazyload_course.png?7.4.0" alt="电商（酒仙网）网站开发实战教程" class="img-responsive" data-echo="./images/1515036260671.png"></a>
+                                    </div>
+                                    <div class="course-info" style="text-align:center">
+                                        <h4>印度母佛像</h4>
+                                        <span>成交价<br/>￥4900.0000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <div class="course-item">
+                                    <div class="course-img">
+                                        <a href="/course/67" target="_blank">
+                                            <img src="./images/lazyload_course.png?7.4.0" alt="电商（酒仙网）网站开发实战教程" class="img-responsive" data-echo="./images/1515036260671.png"></a>
+                                    </div>
+                                    <div class="course-info" style="text-align:center">
+                                        <h4>印度母佛像</h4>
+                                        <span>成交价<br/>￥4900.0000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <div class="course-item">
+                                    <div class="course-img">
+                                        <a href="/course/67" target="_blank">
+                                            <img src="./images/lazyload_course.png?7.4.0" alt="电商（酒仙网）网站开发实战教程" class="img-responsive" data-echo="./images/1515036260671.png"></a>
+                                    </div>
+                                    <div class="course-info" style="text-align:center">
+                                        <h4>印度母佛像</h4>
+                                        <span>成交价<br/>￥4900.0000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <div class="course-item">
+                                    <div class="course-img">
+                                        <a href="/course/67" target="_blank">
+                                            <img src="./images/lazyload_course.png?7.4.0" alt="电商（酒仙网）网站开发实战教程" class="img-responsive" data-echo="./images/1515036260671.png"></a>
+                                    </div>
+                                    <div class="course-info" style="text-align:center">
+                                        <h4>印度母佛像</h4>
+                                        <span>成交价<br/>￥4900.0000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="section-more-btn">
+                        <a href="/course/explore" class="btn btn-default btn-lg">更多课程
+                            <i class="mrs-o es-icon es-icon-chevronright"></i></a>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <div class="es-footer-link">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 footer-logo hidden-sm hidden-xs">
+                            <a class="" href="/" target="_blank">
+                                <img src="./images/bottom_logo.png?6.17.1.1" alt="建议图片大小为233*64">
+                            </a>
+                            <img src="./images/wechat.jpg?6.17.1.1" style="margin-left:20px;">
+                        </div>
+
+                        <div class="col-md-6 col-xs-12 footer-logo hidden-lg hidden-md">
+                            <img src="./images/wechat.jpg?6.17.1.1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="es-footer">
+                <div class="copyright">
+                    <div class="container">
+                        <div class="mts">
+                            Copyright @2015-2017 <a href="http://www.moocba.com/" target="_blank">慕课吧-为原创而生！</a> <span class="hidden-xs">|</span>
+                            <a class="mlm hidden-xs" href="http://www.miibeian.gov.cn/" target="_blank">
+                                晋ICP备15008587号
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div id="login-modal" class="modal" data-url="/login/ajax"></div>
+        <div id="modal" class="modal"></div>
+        <div id="attachment-modal" class="modal"></div>
+        <script src="https://cdn.bootcss.com/jquery/1.3.0/jquery.min.js"></script>
+        <script>
+            var app = {};
+            app.debug = false;
+            app.version = '7.4.0';
+            app.basePath = '';
+            app.theme = 'jianmo';
+            app.themeGlobalScript = 'theme/global-script';
+            app.jsPaths = {"theme":"\./themes\/jianmo\/js","customwebbundle":"\./bundles\/customweb\/js","customadminbundle":"\./bundles\/customadmin\/js","topxiawebbundle":"\./bundles\/topxiaweb\/js","topxiaadminbundle":"\./bundles\/topxiaadmin\/js","classroombundle":"\./bundles\/classroom\/js","materiallibbundle":"\./bundles\/materiallib\/js","sensitivewordbundle":"\./bundles\/sensitiveword\/js","permissionbundle":"\./bundles\/permission\/js","orgbundle":"\./bundles\/org\/js"};
+
+            app.crontab = '/common/crontab';
+
+            var CKEDITOR_BASEPATH = app.basePath + '/js/ckeditor/4.6.7/';
+            var CLOUD_FILE_SERVER = "";
+
+            app.config = {"api":{"weibo":{"key":""},"qq":{"key":""},"douban":{"key":""},"renren":{"key":""}},"cloud":{"video_player":"http:\/\/cdn.staticfile.org\/GrindPlayerCN\/1.0.2\/GrindPlayer.swf","video_player_watermark_plugin":"http:\/\/cdn.staticfile.org\/GrindPlayerCN\/1.0.2\/Watermake-1.0.3.swf","video_player_fingerprint_plugin":"http:\/\/cdn.staticfile.org\/GrindPlayerCN\/1.0.2\/Fingerprint-1.0.1.swf"},"loading_img_path":"\/assets\/img\/default\/loading.gif?7.4.0"};
+
+            app.arguments = {};
+            app.controller = 'index';
+
+
+            app.uploadUrl = '/images';
+            app.imgCropUrl = '/images';
+            app.lessonCopyEnabled = '1';
+            app.cloudSdkCdn = '';
+            app.mainScript = './js/app.js?7.4.0';
+            app.lang = 'zh_CN';
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+        <script src="./js/sea.js?7.4.0"></script>
+        <script src="./js/seajs-global-config.js?7.4.0"></script>
+        <script>
+            seajs.use(app.mainScript);
+        </script>
+        <script>
+            var mySwiper = new Swiper('.swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+            })
+        </script>
+    </body>
+    </body>
 </html>

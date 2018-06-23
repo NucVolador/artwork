@@ -1,0 +1,37 @@
+#icon{
+    margin-top:20px;
+}
+
+.icon-default{
+    background-color:transparent;
+    border:0;
+    margin-bottom:0;
+}
+.content-center{
+    text-align:center;
+}
+
+@media(min-width: 768px){
+	.swiper-container .swiper-slide{
+		height:410px;
+	}
+}
+
+.swiper-container .swiper-slide{
+    max-width:100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.swiper-container .swiper-slide > img{
+	max-width: 100%;
+	height:auto;
+}
+
+.dropdown-menu > .active > a{
+	background-color: rgba(231,60,40,.8)
+}
+.dropdown-menu > .active > a:hover{
+	background-color: rgba(231,60,40,1)
+}
