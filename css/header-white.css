@@ -47,3 +47,53 @@
 .navbar-form .form-control {
   border-color: #e1e1e1;
 }
+
+
+.page-footer{
+  margin-top:30px;
+  background-color:#D4D4D4;
+  width:100%;
+  padding:50px 0;
+  box-sizing:border-box;
+  text-align:center;
+
+}
+
+.page-footer > div.footer-link > a{
+  display: inline-block;
+  padding:15px;
+  white-space:nowrap;
+}
+
+.page-footer > p > a,
+.page-footer > div.footer-link > a{
+  color:#444;
+  transition:color .2s;
+  -o-transition:color .2s;
+  -webkit-transition:color .2s;
+  -moz-transition:color .2s;
+}
+
+.page-footer > div.footer-link > a:hover,
+.page-footer > p > a:hover{
+  color:red;
+}
+
+.page-footer > p{
+  margin-top:30px;
+}
+
+.page-footer > p:last-child > a:before{
+  content:'';
+  display:inline-block;
+  width:20px;
+  height:20px;
+  background:url('../images/1000.png') no-repeat;
+  background-size:20px 20px;
+  vertical-align: bottom;
+}
+
+.page-footer > p span{
+  display:inline-block;
+  white-space:nowrap
+}

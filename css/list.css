@@ -1,0 +1,34 @@
+#good-rule{
+    margin-top:30px;
+    /*height:300px;*/
+    width:100%;
+    background-color:#fff;
+}
+.rule-info{
+    margin-top:10px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.rule-info > div{
+    float:left
+}
+
+.rule-list h4{
+    color:#999;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.rule-item{
+    padding-left:15px;
+}
+
+.rule-item > a{
+    padding:10px;
+    display: inline-block;
+    color:#999;
+}
+
+.rule-item > a.active{
+    color:#E62928;
+}

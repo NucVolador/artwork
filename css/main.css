@@ -15509,3 +15509,11 @@ background: rgba(247,75,75,1) !important;
 html {
   height: 100%;
 }
+.course-info{
+  text-align:center;color:red;font-weight:700
+}
+
+.pagination > .active > a{
+  background-color:red;
+  border-color:red;
+}
