@@ -5250,7 +5250,7 @@ a.homework-essay-textarea-pack-up {
 .nav.nav-tabs > li > a:focus {
   background: none;
 }
-.nav.nav-tabs > li.active > a,
+/*.nav.nav-tabs > li.active > a,
 .nav.nav-tabs > li:hover > a {
   border: none;
   background: none;
@@ -5259,7 +5259,7 @@ a.homework-essay-textarea-pack-up {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
+}*/
 @media (max-width: 767px) {
   .nav.nav-tabs > li.active > a,
   .nav.nav-tabs > li:hover > a {

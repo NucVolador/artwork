@@ -1,0 +1,59 @@
+.good-info{
+    padding:50px 28px;
+    /*background-color:#F2F2F2;*/
+}
+
+.good-info .title{
+    font: 700 20px Arial,"microsoft yahei";
+    color: #3C3C3C;
+    /*line-height: 28px;*/
+    /*ECFFFF
+    E61717
+    EF8D00
+    333333*/
+}
+.good-info .price{
+    color:#E61717;
+    font:400 36px Arial,"microsoft yahei";
+}
+
+.good-info .author,
+.good-info .author b{
+    color:#9b9b9b;
+    font:400 15px Arial,"microsoft yahei";
+}
+.good-info .introduction span{
+
+}
+.good-info .introduction p{
+    color:#666;
+}
+
+
+.good-info .author b{
+    font-weight:700
+}
+
+div.title ~ div{
+    margin-top:20px;
+}
+
+.good-params tr:last-child{
+    border-bottom:1px solid #ccc
+}
+
+.good-params tr > td{
+    text-align:center;
+}
+
+.pic-list .row > div{
+
+}
+.pic-list img{
+    max-width:100%;
+    height:auto
+}
+.pic-list .title h2{
+    color:#f40;
+    text-align:center;
+}
