@@ -1,0 +1,35 @@
+.nav.nav-tabs{
+    margin-bottom:0;
+    border-color:#ddd;
+}
+.nav.nav-tabs > li.active a{
+    color: #fff;
+    cursor: default;
+    background-color: #e83d2c;
+    /*border: 1px solid #ddd;*/
+    border-bottom-color: transparent;
+    line-height: 1.42857143;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+    border:0;
+}
+
+#userInfo{
+    margin-top:20px;
+}
+
+/*#userInfo .col-sm-10{
+    display:none;
+}*/
+
+/*#userInfo  .row >div.active{*/
+    /*display:block;*/
+/*}*/
+
+/*
+.panel-body{
+    text-align: center;
+}*/
+.form-center{
+    text-align: center;
+}

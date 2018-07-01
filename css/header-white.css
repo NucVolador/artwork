@@ -3,6 +3,7 @@
 /* =========================== media =========================== */
 .es-header {
   background-color: #fff;
+  border-bottom: 1px solid #e7e7e7;
 }
 .es-header .navbar-header .navbar-brand {
   color: #313131;
@@ -96,4 +97,13 @@
 .page-footer > p span{
   display:inline-block;
   white-space:nowrap
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+  background:rgba(247,75,75,.8);
+}
+
+.nav-pills > li > a:hover{
+  background:rgba(247,75,75,.5);
+  color:#fff
 }

@@ -1,0 +1,22 @@
+
+.titles {
+    width: 100%;
+    height: 60px;
+    color:#333333;
+}
+.titles > h2 {
+    font-size: 32px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+}
+.titles > h2 > span {
+    font-weight: bold;
+}
+.contents {
+    width: 100%;
+    padding: 25px 36px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
