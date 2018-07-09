@@ -16,16 +16,12 @@
 
 #userInfo{
     margin-top:20px;
+    min-height: 400px;
 }
 
 /*#userInfo .col-sm-10{
     display:none;
 }*/
-
-/*#userInfo  .row >div.active{*/
-    /*display:block;*/
-/*}*/
-
 /*
 .panel-body{
     text-align: center;
@@ -33,3 +29,18 @@
 .form-center{
     text-align: center;
 }
+#recharge ul {margin-left:10px;padding:0}
+#recharge ul li{list-style:none;text-align:left}
+@media screen and (max-width: 767px) {
+    .col-sm-10 > .tab-content > .active[id]{
+        display:none ;
+    }
+    :target{
+        display:block !important;
+    }
+}
+
+.paging{
+    text-align:center
+}
+.fashion-input label{cursor: pointer;}

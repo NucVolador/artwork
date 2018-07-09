@@ -17,7 +17,11 @@
     <link rel="stylesheet" media="screen" href="./css/es-icon.css">
     <link href="./css/main.css?7.4.0" rel="stylesheet">
     <link href="./css/header-white.css?7.4.0" rel="stylesheet">
-
+    <style>
+        #userInfo div.col-sm-10:target{
+            display:block;
+        }
+    </style>
 </head>
 <body class="homepage">
 <!--最外层div是适应移动端手机导航的，不能删去！！-->
@@ -56,19 +60,18 @@
                         <li class="">
                             <a href="javascript:;" target="_blank">原创艺术 </a>
                         </li>
-                        <li><a href="#">我的订单</a></li>
-                        <li><a href="#">我的宝贝</a></li>
-                        <li><a href="#">我的消息</a></li>
-                        <li><a href="#">我的订单</a></li>
+                        <li><a href="#personOrder">我的订单</a></li>
+                        <li><a href="#personProduct">我的宝贝</a></li>
+                        <li><a href="#personMsg">我的消息</a></li>
                         <li class="nav-hover">
-                            <a href="#">修改信息<b class="caret"></b></a>
+                            <a href="javascript:;">修改信息<b class="caret"></b></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="javascript:;">修改个人信息</a></li>
+                                <li><a href="#fixPersonInfo">修改个人信息</a></li>
                                 <li><a href="#">修改密码</a></li>
                             </ul>
                         </li>
                         <li><a href="#">充值</a></li>
-                        <li><a href="#">提现</a></li>
+                        <li><a href="#getCash">提现</a></li>
                     </ul>
                 </div>
             </div>
@@ -126,75 +129,653 @@
         <div class="row">
             <div class="col-sm-2 hidden-xs">
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active">
-                        <a href="#">我的订单</a>
+                    <li class="active" role="presentation">
+                        <a href="#personOrder" aria-controls="personOrder" data-toggle="tab" role="tab">我的订单</a>
                     </li>
-                    <li>
-                        <a href="#">我的宝贝</a>
+                    <li role="presentation">
+                        <a href="#personProduct" aria-controls="personProduct"  data-toggle="tab" role="tab">我的宝贝</a>
                     </li>
-                    <li>
-                        <a href="#">我的消息</a>
+                    <li role="presentation">
+                        <a href="#personMsg" aria-controls="personMsg" data-toggle="tab" role="tab">我的消息</a>
                     </li>
-                    <li>
-                        <a href="#">个人信息</a>
+                    <li role="presentation">
+                        <a href="#personInfo" aria-controls="personInfo" data-toggle="tab" role="tab">个人信息</a>
                     </li>
-                    <li>
-                        <a href="#">修改信息</a>
+                    <li role="presentation">
+                        <a href="#fixPersonInfo" aria-controls="fixPersonInfo" data-toggle="tab" role="tab">修改信息</a>
                     </li>
-                    <li>
-                        <a href="#">修改密码</a>
+                    <li role="presentation">
+                        <a href="#fixPassword" aria-controls="fixPassword" data-toggle="tab" role="tab">修改密码</a>
                     </li>
-                    <li>
-                        <a href="#">充值</a>
+                    <li role="presentation">
+                        <a href="#recharge" aria-controls="recharge" data-toggle="tab" role="tab">充值</a>
                     </li>
-                    <li>
-                        <a href="#">提现</a>
+                    <li role="presentation">
+                        <a href="#getCash" aria-controls="getCash" data-toggle="tab" role="tab">提现</a>
                     </li>
                 </ul>
             </div>
-            <!--个人信息-->
-            <div class="col-sm-10 active">
-                <div class="panel-group checkout">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <span class="step">01</span>
-                                我的个人信息
-                            </h4>
+            <div class="col-sm-10">
+                <div class="tab-content">
+                    <!--我的订单-->
+                    <div role="tabpanel" class="tab-pane active" id="personOrder">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#allBuy" aria-controls="allBuy" role="tab" data-toggle="tab">全部订单</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#buy" aria-controls="buy" role="tab" data-toggle="tab">已付款订单</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#unBuy" aria-controls="unBuy" role="tab" data-toggle="tab">未付款订单</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="allBuy">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped text-center bg-info">
+                                        <thead>
+                                        <tr class="info">
+                                            <th class="text-center">序号</th>
+                                            <th class="text-center">商品信息</th>
+                                            <th class="text-center">商品名称</th>
+                                            <th class="text-center">单价</th>
+                                            <th class="text-center">订单时间</th>
+                                            <th class="text-center">交易状态</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>全部订单</td>
+                                            <td><img src="./images/1515036260671.png?7.4.0" alt="印度母佛像" width="100"></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+
+
+                                            <!--Modal end-->
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png?7.4.0" alt="印度母佛像" width="100"></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+                                            <!--Modal end-->
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--分页-->
+                                <nav aria-label="Page navigation" class="paging">
+                                    <ul class="pagination pagination-lg">
+                                        <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                        <li><a href="#" >1</a></li>
+                                        <li class="active"><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">6</a></li>
+                                        <li><a href="#">7</a></li>
+                                        <li><a href="#">8</a></li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="buy">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped text-center bg-info">
+                                        <thead>
+                                        <tr class="info">
+                                            <th class="text-center">序号</th>
+                                            <th class="text-center">商品信息</th>
+                                            <th class="text-center">商品名称</th>
+                                            <th class="text-center">单价</th>
+                                            <th class="text-center">订单时间</th>
+                                            <th class="text-center">交易状态</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png?7.4.0" alt="印度母佛像" width="100"></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+                                            <!--Modal end-->
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png?7.4.0" alt="印度母佛像" width="100"></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+                                            <!--Modal end-->
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <nav aria-label="Page navigation" class="paging">
+                                    <ul class="pagination pagination-lg">
+                                        <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                        <li><a href="#" >1</a></li>
+                                        <li class="active"><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">6</a></li>
+                                        <li><a href="#">7</a></li>
+                                        <li><a href="#">8</a></li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="unBuy">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped text-center bg-info">
+                                        <thead>
+                                        <tr class="info">
+                                            <th class="text-center">序号</th>
+                                            <th class="text-center">商品信息</th>
+                                            <th class="text-center">商品名称</th>
+                                            <th class="text-center">单价</th>
+                                            <th class="text-center">订单时间</th>
+                                            <th class="text-center">交易状态</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>未付订单</td>
+                                            <td><img src="./images/1515036260671.png?7.4.0" alt="印度母佛像" width="100"></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+
+
+                                            <!--Modal end-->
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png?7.4.0" alt="印度母佛像" width="100"></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+                                            <!--Modal end-->
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <nav aria-label="Page navigation" class="paging">
+                                    <ul class="pagination pagination-lg">
+                                        <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                        <li class="active"><a href="#" >1</a></li>
+                                        <li ><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">6</a></li>
+                                        <li><a href="#">7</a></li>
+                                        <li><a href="#">8</a></li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
                         </div>
-                        <div class="panel-collapse">
-                            <div class="panel-body">
-                                <div class="form-horizontal">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-                                            <div class="form-group stylish-input">
-                                                <label class="col-sm-4 col-lg-4 control-label required">昵称:</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <label style="margin-top:5px;">小轩轩丫</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group stylish-input">
-                                                <label class="col-sm-4 col-lg-4 control-label required">姓名:</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <label style="margin-top:5px;">薛升华</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group stylish-input">
-                                                <label class="col-sm-4 col-lg-4 control-label required">邮箱:</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <label style="margin-top:5px;">shenghuaxue@163.com</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group stylish-input">
-                                                <label class="col-sm-4 col-lg-4 control-label required">电话:</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <label style="margin-top:5px;">188888888</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group stylish-input">
-                                                <label class="col-sm-4 col-lg-4 control-label required">余额:</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <label style="margin-top:5px;color:red;">8226.0元</label>
+
+
+                    </div>
+                    <!--我的宝贝-->
+                    <div role="tabpanel" class="tab-pane" id="personProduct">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#allSale" aria-controls="allSale" role="tab" data-toggle="tab">全部宝贝</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#sale" aria-controls="sale" role="tab" data-toggle="tab">已出售消息</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#unSale" aria-controls="unsale" role="tab" data-toggle="tab">未出售宝贝</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="allSale">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped text-center bg-info">
+                                        <thead>
+                                        <tr class="info">
+                                            <th class="text-center">序号</th>
+                                            <th class="text-center">商品信息</th>
+                                            <th class="text-center">商品名称</th>
+                                            <th class="text-center">单价</th>
+                                            <th class="text-center">订单时间</th>
+                                            <th class="text-center">交易状态</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png?7.4.0" alt="印度母佛像" width="100"></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+
+
+                                            <!--Modal end-->
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png?7.4.0" alt="印度母佛像" width="100"></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+
+
+                                            <!--Modal end-->
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <nav aria-label="Page navigation" class="paging">
+                                    <ul class="pagination pagination-lg">
+                                        <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                        <li class="active"><a href="#" >1</a></li>
+                                        <li ><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">6</a></li>
+                                        <li><a href="#">7</a></li>
+                                        <li><a href="#">8</a></li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="sale">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped text-center bg-info">
+                                        <thead>
+                                        <tr class="info">
+                                            <th class="text-center">序号</th>
+                                            <th class="text-center">商品信息</th>
+                                            <th class="text-center">商品名称</th>
+                                            <th class="text-center">单价</th>
+                                            <th class="text-center">订单时间</th>
+                                            <th class="text-center">交易状态</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png?7.4.0" alt="印度母佛像" width="100"></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+
+
+                                            <!--Modal end-->
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png?7.4.0" alt="印度母佛像" width="100"></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+
+
+                                            <!--Modal end-->
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <nav aria-label="Page navigation" class="paging">
+                                    <ul class="pagination pagination-lg">
+                                        <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                        <li class="active"><a href="#" >1</a></li>
+                                        <li ><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">6</a></li>
+                                        <li><a href="#">7</a></li>
+                                        <li><a href="#">8</a></li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="unSale">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped text-center bg-info">
+                                        <thead>
+                                        <tr class="info">
+                                            <th class="text-center">序号</th>
+                                            <th class="text-center">商品信息</th>
+                                            <th class="text-center">商品名称</th>
+                                            <th class="text-center">单价</th>
+                                            <th class="text-center">订单时间</th>
+                                            <th class="text-center">交易状态</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png?7.4.0" alt="印度母佛像" width="100"></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+
+
+                                            <!--Modal end-->
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png?7.4.0" alt="印度母佛像" width="100"></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+
+
+                                            <!--Modal end-->
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <nav aria-label="Page navigation" class="paging">
+                                    <ul class="pagination pagination-lg">
+                                        <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                        <li class="active"><a href="#" >1</a></li>
+                                        <li ><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">6</a></li>
+                                        <li><a href="#">7</a></li>
+                                        <li><a href="#">8</a></li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!--我的消息-->
+                    <div role="tabpanel" class="tab-pane" id="personMsg">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#all" aria-controls="all" role="tab" data-toggle="tab">全部消息</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#read" aria-controls="read" role="tab" data-toggle="tab">已读消息</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#unread" aria-controls="unread" role="tab" data-toggle="tab">未读消息</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="all">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped text-center bg-info">
+                                        <thead>
+                                        <tr class="info">
+                                            <th class="text-center">序号</th>
+                                            <th class="text-center">商品信息</th>
+                                            <th class="text-center">商品名称</th>
+                                            <th class="text-center">单价</th>
+                                            <th class="text-center">订单时间</th>
+                                            <th class="text-center">交易状态</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png" alt="印度母佛像"width="100"></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+
+
+                                            <!--Modal end-->
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png" alt="印度母佛像"width="100"></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+
+
+                                            <!--Modal end-->
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <nav aria-label="Page navigation" class="paging">
+                                    <ul class="pagination pagination-lg">
+                                        <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                        <li><a href="#" >1</a></li>
+                                        <li class="active"><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">6</a></li>
+                                        <li><a href="#">7</a></li>
+                                        <li><a href="#">8</a></li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="read">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped text-center bg-info">
+                                        <thead>
+                                        <tr class="info">
+                                            <th class="text-center">序号</th>
+                                            <th class="text-center">商品信息</th>
+                                            <th class="text-center">商品名称</th>
+                                            <th class="text-center">单价</th>
+                                            <th class="text-center">订单时间</th>
+                                            <th class="text-center">交易状态</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png" width="100" alt=""></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+
+
+                                            <!--Modal end-->
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png" width="100"  alt=""></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+
+
+                                            <!--Modal end-->
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <nav aria-label="Page navigation" class="paging">
+                                    <ul class="pagination pagination-lg">
+                                        <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                        <li><a href="#" >1</a></li>
+                                        <li class="active"><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">6</a></li>
+                                        <li><a href="#">7</a></li>
+                                        <li><a href="#">8</a></li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="unread">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped text-center bg-info">
+                                        <thead>
+                                        <tr class="info">
+                                            <th class="text-center">序号</th>
+                                            <th class="text-center">商品信息</th>
+                                            <th class="text-center">商品名称</th>
+                                            <th class="text-center">单价</th>
+                                            <th class="text-center">订单时间</th>
+                                            <th class="text-center">交易状态</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png" width="100" alt=""></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+
+
+                                            <!--Modal end-->
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>mmss</td>
+                                            <td><img src="./images/1515036260671.png" width="100"  alt=""></td>
+                                            <td>小小</td>
+                                            <td>女</td>
+                                            <td>12345678901</td>
+                                            <!-- Modal begin-->
+                                            <!--添加-->
+
+
+                                            <!--Modal end-->
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <nav aria-label="Page navigation" class="paging">
+                                    <ul class="pagination pagination-lg">
+                                        <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                        <li><a href="#" >1</a></li>
+                                        <li class="active"><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">6</a></li>
+                                        <li><a href="#">7</a></li>
+                                        <li><a href="#">8</a></li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!--个人信息-->
+                    <div role="tabpanel" class="tab-pane" id="personInfo">
+                        <div class="panel-group checkout">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <span class="step">01</span>
+                                        我的个人信息
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse">
+                                    <div class="panel-body">
+                                        <div class="form-horizontal">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                                                    <div class="form-group stylish-input">
+                                                        <label class="col-sm-4 col-lg-4 control-label required">昵称:</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <label style="margin-top:5px;">小轩轩丫</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group stylish-input">
+                                                        <label class="col-sm-4 col-lg-4 control-label required">姓名:</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <label style="margin-top:5px;">薛升华</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group stylish-input">
+                                                        <label class="col-sm-4 col-lg-4 control-label required">邮箱:</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <label style="margin-top:5px;">shenghuaxue@163.com</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group stylish-input">
+                                                        <label class="col-sm-4 col-lg-4 control-label required">电话:</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <label style="margin-top:5px;">188888888</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group stylish-input">
+                                                        <label class="col-sm-4 col-lg-4 control-label required">余额:</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <label style="margin-top:5px;color:red;">8226.0元</label>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -203,644 +784,194 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!--修改个人信息-->
-            <div class="col-sm-10 ">
-                <div class="panel-group checkout">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <span class="step">01</span>
-                                修改个人信息
-                            </h4>
-                        </div>
-                        <div class="panel-collapse">
-                            <div class="panel-body form-center">
-                                <form action="#" class="form-horizontal" role="form" method="post">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-                                            <div class="form-group stylish-input">
-                                                <label for="modifynichen" class="col-sm-4 col-lg-4 control-label required">昵称</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <input type="text" class="form-control" id="modifynichen" name="username" value="小轩轩丫">
+                    <!--修改个人信息-->
+                    <div role="tabpanel" class="tab-pane" id="fixPersonInfo">
+                        <div class="panel-group checkout">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <span class="step">01</span>
+                                        修改个人信息
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse">
+                                    <div class="panel-body form-center">
+                                        <form action="#" class="form-horizontal" role="form" method="post">
+                                            <div class="row">
+                                                <div style=" text-align: left; " class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                                                    <div class="form-group stylish-input">
+                                                        <label for="modifynichen" class="col-sm-4 col-lg-4 control-label required">昵称</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <input type="text" class="form-control" id="modifynichen" name="username" value="小轩轩丫">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group stylish-input">
+                                                        <label for="modifyInputFirstName" class="col-sm-4 col-lg-4 control-label required">姓名</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <input type="text" class="form-control" id="modifyInputFirstName" name="truename" value="薛升华">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group stylish-input">
+                                                        <label for="modifyInputPhone" class="col-sm-4 col-lg-4 control-label required">电话</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <input type="text" class="form-control" id="modifyInputPhone" name="telephone" value="188888888">
+                                                        </div>
+                                                    </div>
                                                 </div>
+                                                <div class="space20 clearfix"></div>
+                                                <button class="btn btn-danger">确认信息</button>
                                             </div>
-                                            <div class="form-group stylish-input">
-                                                <label for="modifyInputFirstName" class="col-sm-4 col-lg-4 control-label required">姓名</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <input type="text" class="form-control" id="modifyInputFirstName" name="truename" value="薛升华">
-                                                </div>
-                                            </div>
-                                            <div class="form-group stylish-input">
-                                                <label for="modifyInputPhone" class="col-sm-4 col-lg-4 control-label required">电话</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <input type="text" class="form-control" id="modifyInputPhone" name="telephone" value="188888888">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="space20 clearfix"></div>
-                                        <button class="btn btn-danger">确认信息</button>
+                                        </form>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!--修改密码-->
-            <div class="col-sm-10 ">
-                <div class="panel-group checkout">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <span class="step">01</span>
-                                修改密码
-                            </h4>
-                        </div>
-                        <div class="panel-collapse">
-                            <div class="panel-body form-center">
-                                <form action="#" method="post" class="form-horizontal" id="myForm" novalidate="novalidate">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-md-offset-3">
-                                            <div class="form-group stylish-input">
-                                                <label for="modifyOldPassword" class="col-sm-4 col-lg-4 control-label required">旧密码</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <input type="password" class="form-control" id="modifyOldPassword" name="password" placeholder="请输入旧密码">
+                    <!--修改密码-->
+                    <div role="tabpanel" class="tab-pane" id="fixPassword">
+                        <div class="panel-group checkout">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <span class="step">01</span>
+                                        修改密码
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse">
+                                    <div class="panel-body form-center">
+                                        <form action="#" method="post" class="form-horizontal" id="myForm" novalidate="novalidate">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-md-offset-3">
+                                                    <div class="form-group stylish-input">
+                                                        <label for="modifyOldPassword" class="col-sm-4 col-lg-4 control-label required">旧密码</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <input type="password" class="form-control" id="modifyOldPassword" name="password" placeholder="请输入旧密码">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group stylish-input">
+                                                        <label for="mofidyNewPassword" class="col-sm-4 col-lg-4 control-label required">新密码</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <input type="password" class="form-control" name="cpassword" id="mofidyNewPassword" placeholder="请输入新密码">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group stylish-input">
+                                                        <label for="modifyRePassword" class="col-sm-4 col-lg-4 control-label required">确认密码</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <input type="password" class="form-control" id="modifyRePassword" name="repassword" placeholder="请输入确认密码">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="form-group stylish-input">
-                                                <label for="mofidyNewPassword" class="col-sm-4 col-lg-4 control-label required">新密码</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <input type="password" class="form-control" name="cpassword" id="mofidyNewPassword" placeholder="请输入新密码">
-                                                </div>
-                                            </div>
-                                            <div class="form-group stylish-input">
-                                                <label for="modifyRePassword" class="col-sm-4 col-lg-4 control-label required">确认密码</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <input type="password" class="form-control" id="modifyRePassword" name="repassword" placeholder="请输入确认密码">
-                                                </div>
-                                            </div>
-                                        </div>
 
+                                            </div>
+                                            <div class="space20 clearfix"></div>
+                                            <button class="btn btn-danger">确认修改</button>
+                                        </form>
                                     </div>
-                                    <div class="space20 clearfix"></div>
-                                    <button class="btn btn-danger">确认修改</button>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!--充值-->
-            <div class="col-sm-10">
-                <div class="panel-group checkout">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <span class="step">01</span>
-                                在线充值
-                            </h4>
-                        </div>
-                        <div class="panel-collapse">
-                            <div class="panel-body form-center">
-                                <form action="#" class="form-horizontal" role="form">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-12">
-                                            <div class="form-group stylish-input">
-                                                <label for="sumMoney" class="col-sm-4 col-lg-4 control-label required">充值金额</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <input type="text" class="form-control" id="sumMoney">
+                    <!--充值-->
+                    <div role="tabpanel" class="tab-pane" id="recharge">
+                        <div class="panel-group checkout">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <span class="step">01</span>
+                                        在线充值
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse">
+                                    <div class="panel-body form-center">
+                                        <form action="#" class="form-horizontal" role="form">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="sumMoney" class="col-sm-4 col-lg-4 control-label required">充值金额</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <input type="text" class="form-control" id="sumMoney">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-12">
-                                            <div class="form-group stylish-input">
-                                                <label class="col-sm-4 col-lg-4 control-label required">充值方式</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <div class="form-group fashion-input">
-                                                        <ul>
-                                                            <input type="radio" name="radio">
-                                                            <img src="./images/zfb.jpg">
-                                                        </ul>
-
-                                                        <ul>
-                                                            <input type="radio" name="radio">
-                                                            <img src="./images/wei_pay.png">
-                                                        </ul>
+                                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4 col-lg-4 control-label required">充值方式</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <div class="form-group fashion-input">
+                                                                <ul>
+                                                                    <li>
+                                                                        <label>
+                                                                            <input type="radio" name="radio">
+                                                                            <img src="./images/zfb.jpg">
+                                                                        </label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <label>
+                                                                            <input type="radio" name="radio">
+                                                                            <img src="./images/wei_pay.png">
+                                                                        </label>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                            <div class="space20 clearfix"></div>
+                                            <button class="btn btn-danger">确认充值</button>
+                                        </form>
                                     </div>
-                                    <div class="space20 clearfix"></div>
-                                    <button class="btn btn-danger">确认充值</button>
-                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--提现-->
+                    <div role="tabpanel" class="tab-pane" id="getCash">
+                        <div class="panel-group checkout">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <span class="step">01</span>
+                                        我要提现
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse">
+                                    <div class="panel-body form-center">
+                                        <form action="#" class="form-horizontal" role="form">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                                                    <div class="form-group stylish-input">
+                                                        <label for="availableBalance" class="col-sm-4 col-lg-4 control-label required">可用余额</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <input class="form-control" type="text" readonly="" id="availableBalance">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group stylish-input">
+                                                        <label for="account" class="col-sm-4 col-lg-4 control-label required">支付宝帐号</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <input type="text" class="form-control" id="account">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group stylish-input">
+                                                        <label for="extractMoney" class="col-sm-4 col-lg-4 control-label required">提取金额</label>
+                                                        <div class="col-sm-8 col-lg-8">
+                                                            <input type="text" class="form-control" id="extractMoney">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="space20 clearfix"></div>
+                                            <button class="btn btn-danger">确认提取</button>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--提现-->
-            <div class="col-sm-10 ">
-                <div class="panel-group checkout">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <span class="step">01</span>
-                                我要提现
-                            </h4>
-                        </div>
-                        <div class="panel-collapse">
-                            <div class="panel-body form-center">
-                                <form action="#" class="form-horizontal" role="form">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-                                            <div class="form-group stylish-input">
-                                                <label for="availableBalance" class="col-sm-4 col-lg-4 control-label required">可用余额</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <input class="form-control" type="text" readonly="" id="availableBalance">
-                                                </div>
-                                            </div>
-                                            <div class="form-group stylish-input">
-                                                <label for="account" class="col-sm-4 col-lg-4 control-label required">支付宝帐号</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <input type="text" class="form-control" id="account">
-                                                </div>
-                                            </div>
-                                            <div class="form-group stylish-input">
-                                                <label for="extractMoney" class="col-sm-4 col-lg-4 control-label required">提取金额</label>
-                                                <div class="col-sm-8 col-lg-8">
-                                                    <input type="text" class="form-control" id="extractMoney">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="space20 clearfix"></div>
-                                    <button class="btn btn-danger">确认提取</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--我的信息-->
-            <div class="col-sm-10 ">
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active">
-                        <a href="#all" aria-controls="all" role="tab" data-toggle="tab">全部消息</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#read" aria-controls="read" role="tab" data-toggle="tab">已读消息</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#unread" aria-controls="unread" role="tab" data-toggle="tab">未读消息</a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="all">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center bg-info">
-                                <thead>
-                                <tr class="info">
-                                    <th class="text-center">序号</th>
-                                    <th class="text-center">商品信息</th>
-                                    <th class="text-center">商品名称</th>
-                                    <th class="text-center">单价</th>
-                                    <th class="text-center">订单时间</th>
-                                    <th class="text-center">交易状态</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/lazyload_course.png?7.4.0" alt="印度母佛像" data-echo="./images/1515036260671.png" width="100"></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/lazyload_course.png?7.4.0" alt="印度母佛像" data-echo="./images/1515036260671.png" width="100" ></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="read">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center bg-info">
-                                <thead>
-                                <tr class="info">
-                                    <th class="text-center">序号</th>
-                                    <th class="text-center">商品信息</th>
-                                    <th class="text-center">商品名称</th>
-                                    <th class="text-center">单价</th>
-                                    <th class="text-center">订单时间</th>
-                                    <th class="text-center">交易状态</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/1515036260671.png" width="100" alt=""></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/1515036260671.png" width="100"  alt=""></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="unread">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center bg-info">
-                                <thead>
-                                <tr class="info">
-                                    <th class="text-center">序号</th>
-                                    <th class="text-center">商品信息</th>
-                                    <th class="text-center">商品名称</th>
-                                    <th class="text-center">单价</th>
-                                    <th class="text-center">订单时间</th>
-                                    <th class="text-center">交易状态</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/1515036260671.png" width="100" alt=""></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/1515036260671.png" width="100"  alt=""></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--我的宝贝-->
-            <div class="col-sm-10">
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active">
-                        <a href="#allSale" aria-controls="allSale" role="tab" data-toggle="tab">全部宝贝</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#sale" aria-controls="sale" role="tab" data-toggle="tab">已出售消息</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#unSale" aria-controls="unsale" role="tab" data-toggle="tab">未出售宝贝</a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="allSale">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center bg-info">
-                                <thead>
-                                <tr class="info">
-                                    <th class="text-center">序号</th>
-                                    <th class="text-center">商品信息</th>
-                                    <th class="text-center">商品名称</th>
-                                    <th class="text-center">单价</th>
-                                    <th class="text-center">订单时间</th>
-                                    <th class="text-center">交易状态</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/lazyload_course.png?7.4.0" alt="印度母佛像" data-echo="./images/1515036260671.png" width="100"></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/lazyload_course.png?7.4.0" alt="印度母佛像" data-echo="./images/1515036260671.png" width="100" ></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="sale">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center bg-info">
-                                <thead>
-                                <tr class="info">
-                                    <th class="text-center">序号</th>
-                                    <th class="text-center">商品信息</th>
-                                    <th class="text-center">商品名称</th>
-                                    <th class="text-center">单价</th>
-                                    <th class="text-center">订单时间</th>
-                                    <th class="text-center">交易状态</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/lazyload_course.png?7.4.0" alt="印度母佛像" data-echo="./images/1515036260671.png" width="100"></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/lazyload_course.png?7.4.0" alt="印度母佛像" data-echo="./images/1515036260671.png" width="100" ></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="unSale">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center bg-info">
-                                <thead>
-                                <tr class="info">
-                                    <th class="text-center">序号</th>
-                                    <th class="text-center">商品信息</th>
-                                    <th class="text-center">商品名称</th>
-                                    <th class="text-center">单价</th>
-                                    <th class="text-center">订单时间</th>
-                                    <th class="text-center">交易状态</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/lazyload_course.png?7.4.0" alt="印度母佛像" data-echo="./images/1515036260671.png" width="100"></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/lazyload_course.png?7.4.0" alt="印度母佛像" data-echo="./images/1515036260671.png" width="100" ></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--我的订单-->
-            <div class="col-sm-10">
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active">
-                        <a href="#allBuy" aria-controls="allBuy" role="tab" data-toggle="tab">全部订单</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#buy" aria-controls="buy" role="tab" data-toggle="tab">已付款订单</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#unBuy" aria-controls="unBuy" role="tab" data-toggle="tab">未付款订单</a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="allBuy">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center bg-info">
-                                <thead>
-                                <tr class="info">
-                                    <th class="text-center">序号</th>
-                                    <th class="text-center">商品信息</th>
-                                    <th class="text-center">商品名称</th>
-                                    <th class="text-center">单价</th>
-                                    <th class="text-center">订单时间</th>
-                                    <th class="text-center">交易状态</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/lazyload_course.png?7.4.0" alt="印度母佛像" data-echo="./images/1515036260671.png" width="100"></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/lazyload_course.png?7.4.0" alt="印度母佛像" data-echo="./images/1515036260671.png" width="100" ></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="buy">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center bg-info">
-                                <thead>
-                                <tr class="info">
-                                    <th class="text-center">序号</th>
-                                    <th class="text-center">商品信息</th>
-                                    <th class="text-center">商品名称</th>
-                                    <th class="text-center">单价</th>
-                                    <th class="text-center">订单时间</th>
-                                    <th class="text-center">交易状态</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/lazyload_course.png?7.4.0" alt="印度母佛像" data-echo="./images/1515036260671.png" width="100"></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/lazyload_course.png?7.4.0" alt="印度母佛像" data-echo="./images/1515036260671.png" width="100" ></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="unBuy">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center bg-info">
-                                <thead>
-                                <tr class="info">
-                                    <th class="text-center">序号</th>
-                                    <th class="text-center">商品信息</th>
-                                    <th class="text-center">商品名称</th>
-                                    <th class="text-center">单价</th>
-                                    <th class="text-center">订单时间</th>
-                                    <th class="text-center">交易状态</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/lazyload_course.png?7.4.0" alt="印度母佛像" data-echo="./images/1515036260671.png" width="100"></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>mmss</td>
-                                    <td><img src="./images/lazyload_course.png?7.4.0" alt="印度母佛像" data-echo="./images/1515036260671.png" width="100" ></td>
-                                    <td>小小</td>
-                                    <td>女</td>
-                                    <td>12345678901</td>
-                                    <!-- Modal begin-->
-                                    <!--添加-->
-
-
-                                    <!--Modal end-->
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
-
     <!--尾部-->
     <footer class="page-footer">
         <div class="footer-link">
